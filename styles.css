@@ -40,7 +40,8 @@ body {
 
 .card_viewer {
   display : none;
-  justify-items : center
+  justify-items : center;
+  border : solid;
 }
 
 .card_button {
