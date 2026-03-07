@@ -11,15 +11,15 @@
 </head>
 
 <header>
-  <button class="warning">Warning!</button>
-  <div class="eyegor">EYEGOR</div>
-  <button class="info">Info</button>
+  <button id="warning">Warning!</button>
+  <div id="eyegor">EYEGOR</div>
+  <button id="info">Info</button>
 </header>
 
 <body>
   <!-- <h1>Deck Explorer</h1> -->
 
-  <div class="deck_loader">
+  <div id="deck_loader">
     <label>Deck link:</label>
     <input id="deck_link"></input>
     <button onclick="loadDeck()">Load</button>
@@ -27,12 +27,12 @@
 
   <hr>
 
-  <div class="card_viewer", id="card_viewer">
+  <div id="card_viewer">
     <h2 id="deck_name">Deck Name</h2>
 
     <br>
 
-    <div>
+    <div id="cards_div">
       <input
         id="prev"
         type="image"
@@ -41,13 +41,20 @@
         src=""
         class="card card_button"
       ></input>
-      <img
-        src=""
-        width="300"
-        alt="Waiting For Deck"
-        id="card_img"
-        class="card"
-      >
+
+      <div id="active_card_box">
+        <p id="active_house">Active House</p>
+        <br>
+        <img
+          src=""
+          alt="Waiting For Deck"
+          id="card_img"
+          class="card"
+        >
+        <br>
+        <p id="active_data">Data about this card</p>
+      </div>
+
       <input
         id="next"
         type="image"

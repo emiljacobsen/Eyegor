@@ -13,6 +13,7 @@ const requestOptions = {
 
 function updateCardImg(img, card) {
   img["alt"] = card.cardTitle
+  img["src"] = ""
   img["src"] = "image_loading.png"
   img["src"] = card.cardTitleUrl
 }
@@ -22,6 +23,11 @@ function getCard(num) {
   const hNum = (num - cNum) / 12
 
   return housesAndCards[hNum].cards[cNum]
+}
+
+function getHouse(num) {
+  const hNum = (num - num % 12) / 12
+  return housesAndCards[hNum]["house"]
 }
 
 function loadDeck() {
@@ -73,8 +79,75 @@ function changeCard(s) {
   updateCardImg(nextCardImg, getCard(stupidWrap(cardNum + 1)))
 
   let activeCardImg = document.getElementById("card_img")
+  let activeHousePar = document.getElementById("active_house")
+  let activeDataPar = document.getElementById("active_data")
 
   const activeCard = getCard(cardNum)
 
   updateCardImg(activeCardImg, activeCard)
+
+  activeHousePar.innerText = getHouse(cardNum)
+
+  // Example card
+  // anomaly: false
+  // bonusAember: 0
+  // bonusCapture: 0
+  // bonusDamage: 0
+  // bonusDiscard: 0
+  // bonusDraw: 0
+  // bonusHouses: Array []
+  // cardTitle: "Burning Glare"
+  // cardTitleUrl: "https://keyforge-card-images.s3-us-west-2.amazonaws.com/card-images-houses/sanctum/burning-glare.png"
+  // enhanced: false
+  // legacy: false
+  // maverick: false
+  // rarity: "Common"
+
+  let dataTxt = ""
+
+  if (activeCard["enhanced"] == true) {
+    dataTxt += "\n Enhanced:"
+    
+    enhTxt = ""
+    
+    const aember = activeCard["bonusAember"]
+    const capture = activeCard["bonusCapture"]
+    const damage = activeCard["bonusDamage"]
+    const discard = activeCard["bonusDiscard"]
+    const draw = activeCard["bonusDraw"]
+    const houses = activeCard["bonusHouses"]
+
+    if (aember > 0) {
+      enhTxt += ", " + aember + " Aember"
+    }
+    if (capture > 0) {
+      enhTxt += ", " + capture + " Capture"
+    }
+    if (damage > 0) {
+      enhTxt += ", " + damage + " Damage"
+    }
+    if (discard > 0) {
+      enhTxt += ", " + discard + " Discard"
+    }
+    if (draw > 0) {
+      enhTxt += ", " + draw + " Draw"
+    }
+    if (houses.length > 0) {
+      enhTxt += ", " + houses.toString()
+    }
+
+    dataTxt += enhTxt.slice(1) + "."
+  }
+
+  if (activeCard["anomaly"] == true) {
+    dataTxt += "\n Anomaly."
+  }
+  if (activeCard["legacy"] == true) {
+    dataTxt += "\n Legacy."
+  }
+  if (activeCard["maverick"] == true) {
+    dataTxt += "\n Maverick."
+  }
+
+  activeDataPar.innerText = dataTxt.trimStart()
 }
