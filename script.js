@@ -80,6 +80,7 @@ function changeCard(s) {
 
   let activeCardImg = document.getElementById("card_img")
   let activeHousePar = document.getElementById("active_house")
+  let activeNumberPar = document.getElementById("active_number")
   let activeDataPar = document.getElementById("active_data")
 
   const activeCard = getCard(cardNum)
@@ -87,6 +88,8 @@ function changeCard(s) {
   updateCardImg(activeCardImg, activeCard)
 
   activeHousePar.innerText = getHouse(cardNum)
+
+  activeNumberPar.innerText = "Card Number " + (cardNum + 1)
 
   // Example card
   // anomaly: false
