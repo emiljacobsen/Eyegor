@@ -1,0 +1,49 @@
+header {
+  background : lightgrey;
+  margin-bottom : 2em;
+  height : 3em;
+  width : 100%;
+  display : grid;
+  grid-template-columns : 33% 34% 33%;
+  justify-items : center;
+  align-items : center;
+  font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.eyegor {
+  font-weight : 700;
+  font-size : 1.6em;
+  letter-spacing : 0.3em;
+}
+
+.warning {
+  justify-self : start;
+  margin-left : 1em;
+  color : red;
+}
+
+.info {
+  justify-self : end;
+  margin-right : 1em;
+}
+
+body {
+  display : grid;
+  justify-items : center;
+  font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.deck_loader {
+  display : grid;
+  justify-content : center;
+}
+
+.card_viewer {
+  display : none;
+  justify-items : center
+}
+
+.card_button {
+  opacity : 70%;
+  scale : 80%;
+}

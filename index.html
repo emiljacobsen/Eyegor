@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <title>Eyegor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<header>
+  <button class="warning">Warning!</button>
+  <div class="eyegor">EYEGOR</div>
+  <button class="info">Info</button>
+</header>
+
+<body>
+  <!-- <h1>Deck Explorer</h1> -->
+
+  <div class="deck_loader">
+    <label>Deck link:</label>
+    <input id="deck_link"></input>
+    <button onclick="loadDeck()">Load</button>
+  </div>
+
+  <hr>
+
+  <div class="card_viewer", id="card_viewer">
+    <h2 id="deck_name">Deck Name</h2>
+
+    <br>
+
+    <div>
+      <input
+        id="prev"
+        type="image"
+        alt="Previous"
+        onclick="changeCard(-1)"
+        src=""
+        class="card_button"
+      ></input>
+      <img
+        src=""
+        width="300"
+        alt="Waiting For Deck"
+        id="card_img"
+      >
+      <input
+        id="next"
+        type="image"
+        alt="Next"
+        onclick="changeCard(1)"
+        src=""
+        class="card_button"
+      ></input>
+    </div>
+  </div>
+
+</body>
+
+</html>
