@@ -14,6 +14,7 @@ const requestOptions = {
 function updateCardImg(img, card) {
   img["alt"] = card.cardTitle
   img["src"] = ""
+  // TODO: would be better to set src to blank for all three cards at once
   img["src"] = "image_loading.png"
   img["src"] = card.cardTitleUrl
 }
