@@ -1,6 +1,7 @@
 header {
   background : lightgrey;
   margin-bottom : 2em;
+  padding : 0;
   height : 3em;
   width : 100%;
   display : grid;
@@ -42,6 +43,11 @@ body {
   display : none;
   justify-items : center;
   border : solid;
+}
+
+.card {
+  width : 300px;
+  height : 420px;
 }
 
 .card_button {

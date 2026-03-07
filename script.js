@@ -11,12 +11,17 @@ const requestOptions = {
   },
 }
 
-function setCard(elt, num) {
+function updateCardImg(img, card) {
+  img["alt"] = card.cardTitle
+  img["src"] = "image_loading.png"
+  img["src"] = card.cardTitleUrl
+}
+
+function getCard(num) {
   const cNum = num % 12
   const hNum = (num - cNum) / 12
 
-  elt["alt"] = housesAndCards[hNum].cards[cNum].cardTitle
-  elt["src"] = housesAndCards[hNum].cards[cNum].cardTitleUrl
+  return housesAndCards[hNum].cards[cNum]
 }
 
 function loadDeck() {
@@ -60,13 +65,16 @@ function stupidWrap(n) {
 }
 
 function changeCard(s) {
-  let prevCard = document.getElementById("prev")
-  let activeCard = document.getElementById("card_img")
-  let nextCard = document.getElementById("next")
-
   cardNum = stupidWrap(cardNum + s)
 
-  setCard(prevCard, stupidWrap(cardNum - 1))
-  setCard(activeCard, cardNum)
-  setCard(nextCard, stupidWrap(cardNum + 1))
+  let prevCardImg = document.getElementById("prev")
+  let nextCardImg = document.getElementById("next")
+  updateCardImg(prevCardImg, getCard(stupidWrap(cardNum - 1)))
+  updateCardImg(nextCardImg, getCard(stupidWrap(cardNum + 1)))
+
+  let activeCardImg = document.getElementById("card_img")
+
+  const activeCard = getCard(cardNum)
+
+  updateCardImg(activeCardImg, activeCard)
 }
