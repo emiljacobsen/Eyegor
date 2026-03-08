@@ -9,6 +9,7 @@
 - Add a demo deck button.
 
 - Deck overview screen.
+- Process deck on load, formatting all card data texts etc at the start.
 
 - Basic counts. (Only visible after button press.)
   - Creatures.

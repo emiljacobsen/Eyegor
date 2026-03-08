@@ -11,11 +11,15 @@ const requestOptions = {
   },
 }
 
+function clearCardImgs() {
+  for (card of document.querySelectorAll(".card")) {
+    card["src"] = ""
+    // card["src"] = "static/image_loading.png"
+  }
+}
+
 function updateCardImg(img, card) {
   img["alt"] = card.cardTitle
-  img["src"] = ""
-  // TODO: would be better to set src to blank for all three cards at once
-  img["src"] = "image_loading.png"
   img["src"] = card.cardTitleUrl
 }
 
@@ -72,6 +76,8 @@ function stupidWrap(n) {
 }
 
 function changeCard(s) {
+  clearCardImgs()
+
   cardNum = stupidWrap(cardNum + s)
 
   let prevCardImg = document.getElementById("prev")
