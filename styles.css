@@ -1,5 +1,5 @@
 header {
-  background : lightgrey;
+  background : #003d8f;
   margin-bottom : 2em;
   padding : 0;
   border-width : 0;
@@ -10,18 +10,15 @@ header {
   justify-items : center;
   align-items : center;
   font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  margin : 0;
-  padding : 0;
-  border-width : 0;
+  border-bottom : solid;
 }
 
 #eyegor {
   font-weight : 700;
   font-size : 1.6em;
   letter-spacing : 0.3em;
+  color : #fcee21;
+  text-shadow : 0.1em 0.1em 0 black;
 }
 
 #warning {
@@ -39,6 +36,10 @@ body {
   display : grid;
   justify-items : center;
   font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background : grey;
+  margin : 0;
+  padding : 0;
+  border-width : 0;
 }
 
 #deck_loader {
@@ -51,6 +52,7 @@ body {
   justify-items : center;
   gap : 0;
   border : solid;
+  background : lightgrey;
 }
 
 h2 {
@@ -84,6 +86,6 @@ h2 {
 }
 
 .card_button {
-  opacity : 70%;
+  opacity : 50%;
   scale : 80%;
 }
