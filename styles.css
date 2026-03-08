@@ -2,6 +2,7 @@ header {
   background : lightgrey;
   margin-bottom : 2em;
   padding : 0;
+  border-width : 0;
   height : 3em;
   width : 100%;
   display : grid;
@@ -9,6 +10,12 @@ header {
   justify-items : center;
   align-items : center;
   font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin : 0;
+  padding : 0;
+  border-width : 0;
 }
 
 #eyegor {
@@ -42,8 +49,20 @@ body {
 #card_viewer {
   display : none;
   justify-items : center;
+  gap : 0;
   border : solid;
-  height : 700px;
+}
+
+h2 {
+  margin : 0;
+}
+
+.small_div {
+  margin : 0;
+  padding : 0;
+  border-width : 0;
+  height : 2em;
+  align-content : center;
 }
 
 #cards_div {
