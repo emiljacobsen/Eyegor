@@ -1,7 +1,5 @@
 # TODO
 
-- Stop it from resizing when enhancements appear.
-
 - Style the deck loader better, enable `enter` to load.
 - Enable arrow keys to switch cards.
 - Implement warning button.
