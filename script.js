@@ -35,7 +35,7 @@ function getHouse(num) {
   return housesAndCards[hNum]["house"]
 }
 
-function loadDeck() {
+function loadDeckFromInput() {
   const link = document.getElementById("deck_link").value
   const ids = deckIdPattern.exec(link)
   if (ids == null) {
@@ -43,8 +43,16 @@ function loadDeck() {
     // TODO: tell the user outside of the console.
     return
   }
+  loadDeck(ids[0])
+}
+
+function loadDemoDeck() {
+  loadDeck("e343e7ab-d0d8-43cc-b89f-f062feb8b59f")
+}
+
+function loadDeck(deckId) {
   const apiUrl = "https://decksofkeyforge.com/public-api/v3/decks/"
-    + ids[0]
+    + deckId
 
   fetch(apiUrl, requestOptions)
   .then(response => {
@@ -57,6 +65,8 @@ function loadDeck() {
     housesAndCards = data.deck.housesAndCards
     changeCard(0)
     document.getElementById("deck_name").innerText = data.deck.name
+    document.getElementById("deck_name_link").href =
+      "https://decksofkeyforge.com/decks/" + deckId
     document.getElementById("card_viewer").style.display = "grid"
   })
   .catch(error => {

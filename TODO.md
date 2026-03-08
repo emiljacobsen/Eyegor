@@ -2,9 +2,6 @@
 
 - Style the deck loader better, enable `enter` to load.
 - Enable arrow keys to switch cards.
-- Implement warning button.
-- Implement info button.
-- Add a demo deck button.
 
 - Deck overview screen.
 - Process deck on load, formatting all card data texts etc at the start.

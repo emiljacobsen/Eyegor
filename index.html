@@ -16,15 +16,48 @@
     src="static/triangle-warning.svg"
     alt="Warning!"
     width="20px"
+    popovertarget="w_popover"
+    popovertargetaction="toggle"
   ></input>
+  <div id="w_popover" popover>
+    This is a very early version of this tool!
+    In particular, it's not optimized at all for mobile,
+    desktop use is strongly recommended.
+    Some more features waiting to get added:
+    <ul>
+      <li>A view of the Archon Card, with and without enhancements.</li>
+      <li>A grid view of all the cards in the deck.</li>
+      <li>The ability to sample random starting hands.</li>
+      <li>
+        The ability to see some basic counts
+        (number of aember pips, etc).
+      </li>
+      <li>Accurate rendering of enhancement pips,
+        as well as accurate houses of mavericks,
+        directly on the card images.
+      </li>
+      <li>Performance improvement.</li>
+      <li>A visual overhaul.</li>
+    </ul>
+  </div>
+
   <div id="eyegor"> EYEGOR </div>
+
   <input
     id="info"
     type="image"
     src="static/info_white.svg"
     alt="Info"
     width="20px"
+    popovertarget="i_popover"
+    popovertargetaction="toggle"
   ></input>
+  <div id="i_popover" popover>
+    Eyegor is a simple tool which lets you explore a deck digitally 
+    in a similar manner to how you do it physically--without
+    the distraction of SAS numbers or Master Vault jank.
+    Just the cards, please!
+  </div>
 </header>
 
 <body>
@@ -33,13 +66,16 @@
   <div id="deck_loader">
     <label>Deck link:</label>
     <input id="deck_link"></input>
-    <button onclick="loadDeck()">Load</button>
+    <button onclick="loadDeckFromInput()">Load</button>
+    <button onclick="loadDemoDeck()">Demo Deck</button>
   </div>
 
   <hr>
 
   <div id="card_viewer">
-    <h2 id="deck_name">Deck Name</h2>
+    <a id="deck_name_link" href="https://decksofkeyforge.com">
+      <h2 id="deck_name">Deck Name</h2>
+    </a>
 
     <br>
 

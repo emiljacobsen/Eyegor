@@ -27,6 +27,21 @@ header {
   color : red;
 }
 
+[popover] {
+  position-anchor : auto;
+  border : solid;
+  background : darkgrey;
+  width : 20%;
+}
+
+#w_popover {
+  position-area : bottom right;
+}
+
+#i_popover {
+  position-area : bottom left;
+}
+
 #info {
   justify-self : end;
   margin-right : 1em;
