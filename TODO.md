@@ -6,6 +6,7 @@
 - Enable arrow keys to switch cards.
 - Implement warning button.
 - Implement info button.
+- Add a demo deck button.
 
 - Deck overview screen.
 
