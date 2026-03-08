@@ -52,7 +52,7 @@ body {
   justify-items : center;
   gap : 0;
   border : solid;
-  background : lightgrey;
+  background : darkgrey;
 }
 
 h2 {
@@ -83,6 +83,8 @@ h2 {
   width : 300px;
   height : 420px;
   align-self : center;
+  /* background-color : grey;
+  border : solid; */
 }
 
 .card_button {
