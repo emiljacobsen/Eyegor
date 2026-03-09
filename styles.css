@@ -1,5 +1,12 @@
+:root {
+  --bg-colour : white;
+  --bg-colour-alt : white;
+  --primary-colour : #003d8f;
+  --secondary-colour : #fcee21;
+}
+
 header {
-  background : #003d8f;
+  background : var(--primary-colour);
   margin-bottom : 1em;
   padding : 0;
   border-width : 0;
@@ -17,7 +24,7 @@ header {
   font-weight : 700;
   font-size : 1.6em;
   letter-spacing : 0.3em;
-  color : #fcee21;
+  color : var(--secondary-colour);
   text-shadow : 0.1em 0.1em 0 black;
 }
 
@@ -30,7 +37,7 @@ header {
 [popover] {
   position-anchor : auto;
   border : solid;
-  background : darkgrey;
+  background : var(--bg-colour);
   width : 20%;
 }
 
@@ -51,7 +58,7 @@ body {
   display : grid;
   justify-items : center;
   font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background : grey;
+  background : var(--bg-colour);
   margin : 0;
   padding : 0;
   border-width : 0;
@@ -67,7 +74,7 @@ body {
   justify-items : center;
   gap : 0;
   border : solid;
-  background : darkgrey;
+  background : var(--bg-colour-alt);
   margin-top : 1em;
 }
 
