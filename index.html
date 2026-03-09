@@ -86,14 +86,17 @@
     <br>
 
     <div id="cards_div">
-      <input
-        id="prev"
-        type="image"
-        alt="Previous"
-        onclick="changeCard(-1)"
-        src=""
-        class="card card_button"
-      ></input>
+      <div class="card_button_div">
+        <input
+          id="prev"
+          type="image"
+          alt="Previous"
+          onclick="changeCard(-1)"
+          src=""
+          class="card card_button"
+        ></input>
+        <label for="prev">Previous Card</label>
+      </div>
 
       <div id="active_card_box">
         <img
@@ -104,14 +107,21 @@
         >
       </div>
 
-      <input
-        id="next"
-        type="image"
-        alt="Next"
-        onclick="changeCard(1)"
-        src=""
-        class="card card_button"
-      ></input>
+      <div class="card_button_div">
+        <input
+          id="next"
+          type="image"
+          alt="Next"
+          onclick="changeCard(1)"
+          src=""
+          class="card card_button"
+        ></input>
+        <label for="next">Next Card</label>
+      </div>
+
+      <!-- <div class="switch_label small_div">Previous Card</div>
+      <div></div>
+      <div class="switch_label small_div">Next Card</div> -->
     </div>
 
     <br>

@@ -47,7 +47,7 @@ function loadDeckFromInput() {
 }
 
 function loadDemoDeck() {
-  loadDeck("e343e7ab-d0d8-43cc-b89f-f062feb8b59f")
+  loadDeck("31b044fe-5a9d-45f7-b239-20f6678e90a5")
 }
 
 function loadDeck(deckId) {

@@ -86,7 +86,7 @@ h2 {
   margin : 0;
   padding : 0;
   border-width : 0;
-  height : 2em;
+  height : 1.7em;
   align-content : center;
 }
 
@@ -113,4 +113,10 @@ h2 {
 .card_button {
   opacity : 50%;
   scale : 80%;
+}
+
+.card_button_div {
+  display : grid;
+  justify-items : center;
+  align-items : start;
 }
