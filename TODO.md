@@ -18,3 +18,5 @@
   - Swipe to switch card.
 
 - Animations.
+
+- Support prophecies and tokens.

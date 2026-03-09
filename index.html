@@ -10,6 +10,14 @@
 </head>
 
 <header>
+  <!--
+    A header with a warning triangle button,
+    summoning a popover with text about the state
+    of the tool; and an info button, summoning a
+    popover with text about what the tool is.
+  -->
+  
+  <!-- The warning triangle. -->
   <input
     id="warning"
     type="image"
@@ -41,8 +49,10 @@
     </ul>
   </div>
 
+  <!-- Page heading / title text. -->
   <div id="eyegor"> EYEGOR </div>
 
+  <!-- The info button. -->
   <input
     id="info"
     type="image"
@@ -61,8 +71,11 @@
 </header>
 
 <body>
-  <!-- <h1>Deck Explorer</h1> -->
-
+  
+  <!--
+    This is the deck loader, where the user can
+    choose which deck to study.
+  -->
   <div id="deck_loader">
     <label>Deck link:</label>
     <input id="deck_link"></input>
@@ -72,6 +85,11 @@
 
   <br>
 
+  <!--
+    This is the card viewer, which has an active card,
+    and then buttons to the left and right showing the
+    previous and next cards.
+  -->
   <div id="card_viewer">
     <a id="deck_name_link" href="https://decksofkeyforge.com">
       <h2 id="deck_name">Deck Name</h2>
@@ -79,13 +97,17 @@
 
     <br>
 
+    <!-- First, we show the card number and the house of the active card. -->
     <div id="active_number" class="small_div">Card Number</div>
     <br>
     <div id="active_house" class="small_div">Active House</div>
 
     <br>
 
+    <!-- Then, we show the card(s) and related info. -->
     <div id="cards_div">
+
+      <!-- This is the button to go to the previous card. -->
       <div class="card_button_div">
         <input
           id="prev"
@@ -98,6 +120,7 @@
         <label for="prev">Previous Card</label>
       </div>
 
+      <!-- This is the active card. -->
       <div id="active_card_box">
         <img
           src=""
@@ -107,6 +130,7 @@
         >
       </div>
 
+      <!-- This is the button for the next card. -->
       <div class="card_button_div">
         <input
           id="next"
@@ -126,9 +150,11 @@
 
     <br>
 
+    <!-- Then comes info about the active card (enh's, etc.). -->
     <div id="active_data" class="small_div">Data about this card</div>
   </div>
 
+  <!-- We load the script last, as it isn't needed before. -->
   <script src="script.js"></script>
 </body>
 

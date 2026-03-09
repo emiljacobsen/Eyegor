@@ -1,4 +1,5 @@
 :root {
+  /* We set some variables. */
   --bg-colour : white;
   --bg-colour-alt : white;
   --primary-colour : #003d8f;
@@ -7,19 +8,21 @@
 
 header {
   background : var(--primary-colour);
-  margin-bottom : 1em;
-  padding : 0;
-  border-width : 0;
-  height : 3em;
-  width : 100%;
-  display : grid;
-  grid-template-columns : 33% 34% 33%;
-  justify-items : center;
-  align-items : center;
   font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-bottom : solid;
+
+  margin-bottom : 1em;
+  padding : 0;
+  height : 3em;
+  width : 100%;
+
+  display : grid;
+  grid-template-columns : 1fr 1fr 1fr;
+  justify-items : center;
+  align-items : center;
 }
 
+/* Title text. */
 #eyegor {
   font-weight : 700;
   font-size : 1.6em;
@@ -28,12 +31,20 @@ header {
   text-shadow : 0.1em 0.1em 0 black;
 }
 
+/* Warning button. */
 #warning {
   justify-self : start;
   margin-left : 1em;
   color : red;
 }
 
+/* Info button. */
+#info {
+  justify-self : end;
+  margin-right : 1em;
+}
+
+/* Warning and Info popovers. */
 [popover] {
   position-anchor : auto;
   border : solid;
@@ -41,27 +52,26 @@ header {
   width : 20%;
 }
 
+/* Warning popover. */
 #w_popover {
   position-area : bottom right;
 }
 
+/* Info popover. */
 #i_popover {
   position-area : bottom left;
 }
 
-#info {
-  justify-self : end;
-  margin-right : 1em;
-}
-
 body {
-  display : grid;
-  justify-items : center;
-  font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background : var(--bg-colour);
+  font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   margin : 0;
   padding : 0;
   border-width : 0;
+
+  display : grid;
+  justify-items : center;
 }
 
 #deck_loader {
@@ -70,11 +80,17 @@ body {
 }
 
 #card_viewer {
+  /*
+    Starts off hidden, changed to grid by javascript
+    when a deck is loaded.
+  */
   display : none;
   justify-items : center;
   gap : 0;
-  border : solid;
+
   background : var(--bg-colour-alt);
+  border : solid;
+
   margin-top : 1em;
 }
 
@@ -82,12 +98,12 @@ h2 {
   margin : 0;
 }
 
+/* I think I should get rid of this class. */
 .small_div {
   margin : 0;
   padding : 0;
   border-width : 0;
   height : 1.7em;
-  align-content : center;
 }
 
 #cards_div {
@@ -103,16 +119,24 @@ h2 {
 }
 
 .card {
-  width : 300px;
-  height : 420px;
-  align-self : center;
   /* background-color : grey;
   border : solid; */
+
+  width : 300px;
+  height : 420px;
+
+  align-self : center;
 }
 
 .card_button {
   opacity : 50%;
   scale : 80%;
+  /*
+    This scaling seems to bring some issues:
+    the labels below the buttons dare not come
+    closer, they still believe the buttons are
+    normal sized.
+  */
 }
 
 .card_button_div {
