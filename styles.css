@@ -74,9 +74,28 @@ body {
   justify-items : center;
 }
 
+.invisible {
+  display : none;
+}
+
 #deck_loader {
   display : grid;
   justify-content : center;
+}
+
+button {
+  background-color : var(--primary-colour);
+  border : none;
+  
+  color : var(--secondary-colour);
+  text-transform : uppercase;
+  font-weight : 600;
+
+  margin-top : 0.3em;
+}
+
+button:hover {
+  background-color : grey;
 }
 
 #card_viewer {
@@ -94,8 +113,15 @@ body {
   margin-top : 1em;
 }
 
+/* Small class to make text upper case and slightly spaced. */
+.uc_and_spaced {
+  text-transform : uppercase;
+  letter-spacing : 0.06em;
+}
+
 h2 {
   margin : 0;
+  margin-top : 0.3em;
 }
 
 /* I think I should get rid of this class. */

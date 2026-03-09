@@ -77,8 +77,8 @@
     choose which deck to study.
   -->
   <div id="deck_loader">
-    <label>Deck link:</label>
-    <input id="deck_link"></input>
+    <label class="invisible">Deck link:</label>
+    <input id="deck_link" placeholder="Deck Link"></input>
     <button onclick="loadDeckFromInput()">Load</button>
     <button onclick="loadDemoDeck()">Demo Deck</button>
   </div>
@@ -98,9 +98,9 @@
     <br>
 
     <!-- First, we show the card number and the house of the active card. -->
-    <div id="active_number" class="small_div">Card Number</div>
+    <div id="active_number" class="small_div uc_and_spaced">Card Number</div>
     <br>
-    <div id="active_house" class="small_div">Active House</div>
+    <div id="active_house" class="small_div uc_and_spaced">Active House</div>
 
     <br>
 
@@ -117,7 +117,7 @@
           src=""
           class="card card_button"
         ></input>
-        <label for="prev">Previous Card</label>
+        <label for="prev" class="uc_and_spaced">Previous Card</label>
       </div>
 
       <!-- This is the active card. -->
@@ -140,7 +140,7 @@
           src=""
           class="card card_button"
         ></input>
-        <label for="next">Next Card</label>
+        <label for="next" class="uc_and_spaced">Next Card</label>
       </div>
 
       <!-- <div class="switch_label small_div">Previous Card</div>

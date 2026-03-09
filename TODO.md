@@ -1,6 +1,6 @@
 # TODO
 
-- Style the deck loader better, enable `enter` to load.
+- Enable `enter` to load.
 - Enable arrow keys to switch cards.
 
 - Deck overview screen.
